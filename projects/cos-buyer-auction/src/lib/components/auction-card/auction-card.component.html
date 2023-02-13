@@ -1,0 +1,36 @@
+<mat-card *ngIf='item' class='my-2'>
+  <mat-card-header class='d-flex h-100'>
+    <mat-card-title>{{ item.label }}</mat-card-title>
+
+    <mat-card-subtitle *ngIf='item.associatedVehicle'>
+      {{ item.associatedVehicle.ez }} |
+      {{ item.associatedVehicle.mileageInKm | number }}km |
+      {{ item.associatedVehicle.fuelType | fuelType }} |
+      {{ item.associatedVehicle.transmission | transmission }}
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <cos-buyer-auction-card-carousel
+    [itemId]='item.id'
+    [vehicleImages]='item.associatedVehicle.vehicleImages || []'
+    class='mt-2'
+  ></cos-buyer-auction-card-carousel>
+
+  <mat-card-content>
+    <p class='text-muted'>
+      <span class='text-uppercase'>Auction ends in</span>
+      {{ item.remainingTimeInSeconds || 0 | secondsToTimer | async }}
+    </p>
+
+    <p>
+      <span>Highest bid:</span>
+      <span class='cos-bold'> €{{ item.currentHighestBidValue | number }}</span>
+      <span *ngIf='item.amIHighestBidder' class='cos-bold text-danger'> - My</span>
+    </p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-button disabled color='primary'>Set new bid</button>
+    <button mat-button disabled>Learn more...</button>
+  </mat-card-actions>
+</mat-card>

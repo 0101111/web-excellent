@@ -1,0 +1,17 @@
+<uni-loader [linear]='true'></uni-loader>
+
+<h1 *ngIf='(auctionItems$ | async)?.length === 0'>No Results</h1>
+
+<div *ngFor='let group of auctionItems$ | async' class='row'>
+  <div *ngFor='let item of group' class='col-md-4'>
+    <cos-buyer-auction-card [item]='item' class='d-flex h-100'></cos-buyer-auction-card>
+  </div>
+</div>
+
+<mat-paginator
+  [length]="total"
+  [pageIndex]="page-1"
+  [pageSize]="9"
+  aria-label="Select page"
+  class='rounded mb-2'
+></mat-paginator>

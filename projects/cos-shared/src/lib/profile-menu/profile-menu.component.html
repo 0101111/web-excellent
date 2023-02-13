@@ -1,0 +1,15 @@
+<button mat-mini-fab [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+  <mat-icon>person_filled</mat-icon>
+</button>
+
+<mat-menu #menu="matMenu" xPosition="before">
+  <button mat-menu-item disabled>
+    <mat-icon>person_filled</mat-icon>
+    <span>Profile</span>
+  </button>
+
+  <button mat-menu-item (click)='logout()'>
+    <mat-icon>logout</mat-icon>
+    <span>Logout</span>
+  </button>
+</mat-menu>

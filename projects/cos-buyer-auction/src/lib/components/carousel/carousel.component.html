@@ -1,0 +1,23 @@
+<div [attr.id]="'i'+itemId+'i'" class='carousel slide'>
+  <div class='carousel-indicators'>
+    <button type='button' *ngFor='let img of vehicleImages; index as i' [ngClass]='i === 0 ? "active" : ""'
+            [attr.data-bs-target]="'#i'+itemId+'i'" [attr.data-bs-slide-to]='i' [attr.aria-label]='"Slide " + i+1'>
+    </button>
+  </div>
+
+  <div class='carousel-inner'>
+    <div class='carousel-item' *ngFor='let img of vehicleImages; index as i' [ngClass]='i === 0 ? "active" : ""'>
+      <img mat-card-image cosNoImage [src]='img.url' class='d-block w-100' alt='Car image'>
+    </div>
+  </div>
+
+  <button class='carousel-control-prev' type='button' [attr.data-bs-target]="'#i'+itemId+'i'" data-bs-slide='prev'>
+    <span class='carousel-control-prev-icon' aria-hidden='true'></span>
+    <span class='visually-hidden'>Previous</span>
+  </button>
+
+  <button class='carousel-control-next' type='button' [attr.data-bs-target]="'#i'+itemId+'i'" data-bs-slide='next'>
+    <span class='carousel-control-next-icon' aria-hidden='true'></span>
+    <span class='visually-hidden'>Next</span>
+  </button>
+</div>
