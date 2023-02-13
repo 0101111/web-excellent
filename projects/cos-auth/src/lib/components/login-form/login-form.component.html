@@ -1,0 +1,13 @@
+<mat-card class='login-content'>
+  <uni-loader></uni-loader>
+  <img alt="CarOnSale.de" src="assets/img/logo-dark-bg.svg" class="login-logo">
+
+  <mat-card-content>
+    <uni-form-ng (formGroupEvent)='handleForm($event)' (submitEvent)='onFormSubmit($event)'>
+
+      <uni-form-group-ng [url]='"assets/mocks/groups/login.json"'></uni-form-group-ng>
+
+      <button type='submit' mat-raised-button color="primary" class='mt-2 w-100'>Login</button>
+    </uni-form-ng>
+  </mat-card-content>
+</mat-card>
