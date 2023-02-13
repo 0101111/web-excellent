@@ -1,0 +1,9 @@
+{
+  "authenticated": true,
+  "internalUserId": 2324,
+  "internalUserUUID": "054d4577-69a0-4e4b-8e5e-975bcf8c62c7",
+  "privileges": "{SALESMAN_USER}",
+  "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IlRPS0VOLWJ1eWVyLWNoYWxsZW5nZUBjYXJvbnNhbGUuZGUiLCJ1c2VyVXVpZCI6IjA1NGQ0NTc3LTY5YTAtNGU0Yi04ZTVlLTk3NWJjZjhjNjJjNyIsImlhdCI6MTY3NTYyNTM0MiwiZXhwIjoxNjc1ODg0NTQyfQ.kS1zUjnPdM0vpepom3JQ4bWR0mIyNk5FmqY9RY9mFbScy5DfDpgHQ33MmDslpPIAX4c2JB-I02jeWdPQc_BFz_DxaTexi4wjTkk-a8q65d3yDVmMVHE6w-wnb3Vst4ZaFOh1Rk2xyKunJLqVb-oBW-zO_xbm2j2ZNgWw-ylgmrI",
+  "type": 1,
+  "userId": "buyer-challenge@caronsale.de"
+}

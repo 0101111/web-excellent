@@ -1,0 +1,10 @@
+{
+  "type": "email",
+  "key": "email",
+  "label": "E-mail",
+  "required": true,
+  "pattern":"^(?!.*@.*@.*$)(?!.*@.*--.*\\..*$)(?!.*@.*-\\..*$)(?!.*@.*-$)((.*)?@.+(\\..{1,11})?)$",
+  "errors": {
+    "pattern": "Error: please enter a valid e-mail"
+  }
+}
